@@ -1,0 +1,20 @@
+    
+<div class="container">
+    <div class="row">
+
+            <div *ngIf="customerId === 0" class="alret alert-success text-center mt-4">
+                    <h1>The Orders of customer</h1>
+            </div>
+
+        <div *ngIf="customerId > 0" class="alret alert-success text-center mt-4">
+        <h1>The Orders of customer with id : {{customerId}}</h1>
+    </div>
+   
+    </div>
+    <div class="row">
+            
+        <button (click)="goBack()" class="btn btn-danger">go back</button>
+        
+        <button (click)="openPrevious()" class="btn btn-danger">go pre</button>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div *ngFor="let customer of customers; index as i" class="d-flex justify-content-center mb-2 mt-3">
+   
+      <a (click)="getOrders($event,customer.id)"  class="btn btn-info w-50 " [ngClass]="style(customer.id)">
+          {{customer.name}}
+        
+      </a>
+    
+
+     <!-- <button  [routerLink]="['', customer.id]" class="btn btn-info w-50 "                        [ngClass]="style(customer.id)" >{{customer.name}}
+
+     </button> -->
+  </div>  
+  <input  (keyup)="0" #samer>
+  {{aa}}
+  <div  appMystyle bg="#ccc" class="card"  *ngFor="let c of customers1 | filter : samer.value">
+      <div class="card-body">
+        {{c.name}}
+      </div>
+    </div>
+  
+  
+</div>
+
+
+<hr>
+
+<router-outlet></router-outlet>
